@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  scraper:
+    build: .
+    image: art-main:latest
+    profiles:
+      - manual
+#    restart: unless-stopped
+#    restart: "no"
+    deploy:
+      replicas: 3
+      restart_policy:
+        condition: any
+    environment:
+      PYTHONUNBUFFERED: "1"
+    command: >
+      sh -c "xvfb-run -a python -u app.py"
+    volumes:
+      - ./screenshots:/app/screenshots
+
+volumes:
+  screenshots:

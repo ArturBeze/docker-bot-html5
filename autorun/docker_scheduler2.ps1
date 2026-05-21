@@ -11,9 +11,9 @@
 $ErrorActionPreference = "SilentlyContinue"
 
 # ===== Настройки =====
-$screenshotsPath = "C:\Users\r2r\PycharmProjects\promotion\headless-main\screenshots"
+$screenshotsPath = "C:\Users\r2r\PycharmProjects\docker-bot-html5\screenshots"
 $imageName = "my-app"
-$logFile = "C:\Users\r2r\PycharmProjects\promotion\headless-main\docker_scheduler.log"
+$logFile = "C:\Users\r2r\PycharmProjects\docker-bot-html5\docker_scheduler.log"
 
 # ===== Функции =====
 function Write-Log($message) {
